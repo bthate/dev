@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+
+
+import os
+
+
+todo = ["botlib", "botd", "genocide", "rssbot", "newobj", "gcid", "evrm", "kamer", "koning"]
+
+
+def popen(*args, **kwargs):
+    c = 0
+    for l in os.popen(*args, **kwargs):
+        if not c:
+            print(l.strip())
+        c += 1
+
+for td in todo:
+    print("processing %s" % td)
+    os.chdir("w/%s" % td)
+    popen("dev/clean")
+    popen("python3 setup.py sdist")
+    popen("cp dist/* ../../tar")
+    popen("dev/clean")
+    os.chdir("../..")

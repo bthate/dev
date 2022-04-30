@@ -1,0 +1,10 @@
+# This file is placed in the Public Domain
+
+echo "CLEAN"
+bin/clean
+echo "FETCH"
+bin/fetch
+echo "BUILD"
+bin/build
+echo "ENV"
+bin/env

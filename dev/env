@@ -1,0 +1,6 @@
+# This file is placed in the Public Domain.
+
+#python3 -mvirtualenv --system-site-packages env
+python3 -mvirtualenv env
+env/bin/pip3 install oplib oprun opmod opexc opbot -f tar --force-reinstall --upgrade
+

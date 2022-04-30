@@ -1,0 +1,3 @@
+rm -fR w/*
+rm -fR tar/*
+rm -fR env
