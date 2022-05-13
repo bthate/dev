@@ -4,7 +4,7 @@
 import os
 
 
-todo = ["botlib", "botd", "genocide", "rssbot", "newobj", "gcid", "evrm", "kamer", "koning"]
+todo = ["botlib", "rssbot"]
 
 
 def popen(*args, **kwargs):
