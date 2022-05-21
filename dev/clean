@@ -1,3 +1,24 @@
-rm -fR w/*
-rm -fR tar/*
-rm -fR env
+#!/usr/bin/env python3
+# This file is placed in the Public Domain.
+
+
+import os
+
+
+pns = ["genocide", "evrm", "rssbot", "botlib", "botd", "gcid", "kamer", "koning"]
+
+
+
+def popen(txt):
+    for l in os.popen(txt).readlines():
+        print(l)
+
+
+def main()
+    for pn in pns:
+        os.chdir(pn)
+        popen("dev/clean")
+        os.chdir("..")
+
+
+main()

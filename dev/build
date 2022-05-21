@@ -5,7 +5,7 @@
 import os
 
 
-todo = ["botlib", "botd", "genocide", "rssbot", "newobj", "gcid", "evrm", "kamer", "koning"]
+todo = ["botlib", "botd", "genocide", "rssbot", "gcid", "evrm", "kamer", "koning"]
 
 
 def popen(*args, **kwargs):
@@ -15,11 +15,16 @@ def popen(*args, **kwargs):
             print(l.strip())
         c += 1
 
-for td in todo:
-    print("processing %s" % td)
-    os.chdir("w/%s" % td)
-    popen("dev/clean")
-    popen("python3 setup.py sdist")
-    popen("cp dist/* ../../tar")
-    popen("dev/clean")
-    os.chdir("../..")
+
+def main():
+    for td in todo:
+        print("processing %s" % td)
+        os.chdir(td)
+        popen("dev/clean")
+        popen("python3 setup.py sdist")
+        popen("cp dist/* ../tar")
+        popen("dev/clean")
+        os.chdir("..")
+
+
+main()

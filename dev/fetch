@@ -5,7 +5,7 @@
 import os
 
 
-todo = ["botlib", "botd", "rssbot", "newobj"]
+todo = ["genocide", "evrm", "rssbot", "botlib", "botd", "gcid", "kamer", "koning"]
 
 
 def popen(*args, **kwargs):
@@ -17,4 +17,4 @@ def popen(*args, **kwargs):
 
 for td in todo:
     print("cloning %s" % td)
-    popen("git clone ssh://git@github.com/bthate/%s w/%s" % (td, td))
+    popen("git clone ssh://git@github.com/bthate/%s %s" % (td, td))
